@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-color: #DAAF87;
+}
+
+#start {
+    background-color: #B48152;
+}
+
+#show-number {
+    display: inline-block;
+}
+
+#game {
+    background-color: #ffffff;
+    padding: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.jumbotron {
+    background-color: #FFDFC2;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.display-4 {
+    font-weight: bold;
+    letter-spacing: .05em;
+  }
+
+#game {
+    display: none;
+}
