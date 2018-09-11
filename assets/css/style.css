@@ -9,18 +9,21 @@ body {
     font-size: 16px;
 }
 
-#start {
+#start, #done {
     background-color: #B48152;
     letter-spacing: .10em;
     border: none;
 }
 
-#start:hover {
+#start:hover, #done:hover {
     background: rgba(0,0,0,0);
 	color: #B48152;;
-    box-shadow: inset 0 0 0 3px #B48152;;
-    /* color: #3a7999;
-	box-shadow: inset 0 0 0 3px #3a7999; */
+    box-shadow: inset 0 0 0 3px #B48152;
+}
+
+#start:active, #done:active {
+    background-color: #3a7999;
+    color: #ffffff;
 }
 
 #show-number {

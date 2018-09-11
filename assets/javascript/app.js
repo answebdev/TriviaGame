@@ -19,7 +19,8 @@
 // };
 
 // console.log(questions.q3);
-var score = 0;
+var correct = 0;
+var incorrect = 0;
 // Variable to hold the index of the current question
 var qIndex = 0;
 // Array of questions
@@ -85,6 +86,8 @@ $('input[name=optradio1]').click(function () {
     console.log(userAnswer1);
     if (userAnswer1 === "USA Today") {
         console.log("Correct!");
+        correct++; // Do this logic after time's up so that it only adds one time?
+        console.log("Number correct: " + correct);
     } else {
         console.log("Wrong!");
     }
@@ -186,6 +189,8 @@ var timeLeft = 61;
 var intervalId;
 
 $("#start").on("click", timer);
+//  When the Done button gets clicked, run the stop function (defined below).
+$("#done").on("click", stop);
 
 function timer() {
     clearInterval(intervalId);
@@ -201,6 +206,13 @@ function decrement() {
         alert("Time's Up!");
     }
 }
+
+function stop() {
+    clearInterval(intervalId);
+}
+
+// //  When the Done button gets clicked, run the stop function.
+// $("#done").on("click", stop);
 
         // }
 
