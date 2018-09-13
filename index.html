@@ -29,7 +29,7 @@
         </div>
 
         <div id="game">
-            <h3>Time Remaining: <span id="show-number"></span></h3>
+            <!-- <h3>Time Remaining: <span id="show-number"></span></h3> -->
             <br>
             <p>1. What was the best-selling newspaper in the U.S. in 2008?</p>
             <form>
@@ -195,6 +195,12 @@
             <button type="button" class="btn btn-dark btn-lg" id="done"><strong>Done</strong></button>
         </div>
 
+        <nav class="navbar fixed-top navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <h2>Time Remaining: <span id="show-number"></span></h2>
+            </a>
+        </nav>
+
         <div id="score-board">
             <div class="row">
                 <div class="col-lg-4"></div>
@@ -207,12 +213,39 @@
                             <h5 class="card-title" id="unanswered">Unanswered:</h5>
                             <br>
                             <button type="button" class="btn btn-dark" id="again"><strong>Play Again</strong></button>
+                            <button type="button" class="btn btn-primary" id="exit" data-toggle="modal" data-target="#exampleModal">
+                                <strong>Exit</strong>
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel"><strong>Trivia Game</strong></h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Thank you for playing!
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-primary" id="exit" href="exit.html" role="button">Goodbye</a>
+                                            <button type="button" class="btn btn-primary" id="exit" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4"></div>
             </div>
         </div>
+
 
 
     </div>

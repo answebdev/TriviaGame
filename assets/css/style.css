@@ -7,16 +7,23 @@ body {
     background-color: #DAAF87;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+
+    background: url(https://images.pexels.com/photos/327472/pexels-photo-327472.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    /* background: url(https://images.pexels.com/photos/296884/pexels-photo-296884.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); */
+    /* background: url(https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); */
+    /* background: url("../images/colorful_01.jpg"); */
+	/* background-size: cover; */
+	background-position: center;
 }
 
-#start, #done, #again {
+#start, #done, #again, #exit {
     background-color: #B48152;
     color: #FFEFE0;
     letter-spacing: .10em;
     border: none;
 }
 
-#start:hover, #done:hover, #again:hover {
+#start:hover, #done:hover, #again:hover #exit:hover {
     background: rgba(0,0,0,0);
 	color: #B48152;;
     box-shadow: inset 0 0 0 3px #B48152;
@@ -32,13 +39,15 @@ body {
 }
 
 #game {
+    margin-top: 50px;
+    display: none;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     background-color: #FFEFE0;
     padding: 40px;
-    /* border-top-left-radius: 5px;
-    border-top-right-radius: 5px; */
 }
 
 .jumbotron {
+    /* opacity: 0.8; */
     background-color: #FFDFC2;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -48,11 +57,14 @@ body {
 .display-4 {
     font-weight: bold;
     letter-spacing: .05em;
-  }
+}
 
-#game {
+.navbar {
     display: none;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    font-family: 'Poppins', sans-serif;
+    background-color: #B48152!important;
+    padding-top: 15px;
+    padding-bottom: 5px
 }
 
 #score-board {
@@ -70,3 +82,7 @@ body {
     font-weight: 700;
     letter-spacing: .05em;
 }
+
+/* #exit {
+    display: inline;
+} */

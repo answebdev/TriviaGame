@@ -34,8 +34,15 @@
 
 // function startGame() {
 
+// Start game
 $("#start").on("click", function (gameContent) {
     $("#game").show();
+    gameContent.preventDefault();
+});
+
+// Show Navbar when clicking Start button
+$("#start").on("click", function (gameContent) {
+    $(".navbar").show();
     gameContent.preventDefault();
 });
 
@@ -49,6 +56,7 @@ $("#start").on("click", function (gameContent) {
 // var userGuesses = [];
 var right = [];
 var wrong = [];
+// var unanswered = [];
 
 // $('input[name=optradio1]').click(function () {
 // });
@@ -105,6 +113,7 @@ function decrement() {
         clearInterval(intervalId);
         $("#score-board").show();
         $("#game").hide();
+        $(".navbar").hide();
         alert("Time's Up!");
 
         var userAnswer1 = $('input[name=optradio1]:checked').val();
@@ -209,7 +218,7 @@ function decrement() {
 
         document.getElementById("correct").innerHTML = "<h5>Correct Answers: " + totalRight + "</h5> ";
         document.getElementById("incorrect").innerHTML = "<h5>Inorrect Answers: " + totalWrong + "</h5> ";
-        // document.getElementById("unanswered").innerHTML = "<h5>Unanswered: " + totalWrong + "</h5> ";
+        document.getElementById("unanswered").innerHTML = "<h5>Unanswered: " + totalWrong + "</h5> ";
 
 
         //====================================================================================
@@ -239,6 +248,12 @@ $("#done").on("click", function (gameContent) {
     gameContent.preventDefault();
 });
 
+// Hide the Navbar when clicking Done button
+$("#done").on("click", function (gameContent) {
+    $(".navbar").hide();
+    gameContent.preventDefault();
+});
+
 // Hide the jumbotron when clicking Done button
 $("#done").on("click", function (gameContent) {
     $(".jumbotron").hide();
@@ -251,26 +266,25 @@ $("#done").on("click", function (gameContent) {
 //     gameContent.preventDefault();
 // });
 
+// Show the Jumbotron again after clicking Play Again button
+$("#again").on("click", function (gameContent) {
+    $(".jumbotron").show();
+    gameContent.preventDefault();
+    // Restart timer after showing questions again
+    // timer();
+    $("#start").on("click", timer);
+});
+
+// Hide the totals when clicking Play Again button
+$("#again").on("click", function (gameContent) {
+    $("#score-board").hide();
+    gameContent.preventDefault();
+});
+
+
+
 function stop() {
     clearInterval(intervalId);
-
-    // $("#done").on("click", function (gameContent) {
-    //     $("#score-board").show();
-    //     gameContent.preventDefault();
-    // });
-
-    // Variables that hold references to the places in the HTML where we want to display things.
-    // var correctAnswers = document.getElementById("correct");
-    // document.getElementById("correct").innerHTML = totalRight;
-
-    // $(document).ready(function(){
-    // $("#hide").click(function(){
-    //     $("p").hide();
-    // });
-    // $("#done").click(function(){
-    //     $("#score-board").show();
-    // });
-    // });
 
     var userAnswer1 = $('input[name=optradio1]:checked').val();
     console.log(userAnswer1);
@@ -359,13 +373,28 @@ function stop() {
         return cleanedRightArray;
     }
 
+
+    // // Remove duplicates from unanswered array here
+    // function removeUnansweredDuplicates(arrUnanswered) {
+    //     let cleanedUnansweredArray = [];
+    //     for (let i = 0; i < arrRight.length; i++) {
+    //         if (cleanedUnansweredArray.indexOf(arrUnanswered[i]) == -1) {
+    //             cleanedUnansweredArray.push(arrUnanswered[i])
+    //         }
+    //     }
+    //     return cleanedUnansweredArray;
+    // }
+
     console.log("Cleaned RIGHT Array: " + removeRightDuplicates(right));
     console.log("Cleaned WRONG Array: " + removeWrongDuplicates(wrong));
+    // console.log("Cleaned UNANSWERED Array: " + removeUnansweredDuplicates(arrUnanswered));
 
     var totalRight = right.length;
     console.log("Total Right = " + totalRight);
     var totalWrong = wrong.length;
     console.log("Total Wrong = " + totalWrong);
+    // var totalUnanswered = 10 - (totalRight + totalWrong);
+    // console.log("Total Unanswered = " + totalUnanswered);
 
     // console.log("Unanswered = " +);
 
