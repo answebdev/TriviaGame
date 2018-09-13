@@ -11,6 +11,7 @@ body {
 
 #start, #done {
     background-color: #B48152;
+    color: #FFEFE0;
     letter-spacing: .10em;
     border: none;
 }
@@ -22,8 +23,8 @@ body {
 }
 
 #start:active, #done:active {
-    background-color: #3a7999;
-    color: #ffffff;
+    background-color: #956131;
+    color: #FFEFE0;
 }
 
 #show-number {
@@ -31,7 +32,7 @@ body {
 }
 
 #game {
-    background-color: #ffffff;
+    background-color: #FFEFE0;
     padding: 40px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;

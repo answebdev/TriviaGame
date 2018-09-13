@@ -19,10 +19,10 @@
 // };
 
 // console.log(questions.q3);
-var correct = 0;
-var incorrect = 0;
+// var correct = 0;
+// var incorrect = 0;
 // Variable to hold the index of the current question
-var qIndex = 0;
+// var qIndex = 0;
 // Array of questions
 // var qArray = [questions.q1, questions.q2, questions.q3, questions.q4, questions.q5];
 
@@ -40,152 +40,44 @@ $("#start").on("click", function (gameContent) {
 });
 
 
-// function getRadioVal(form, name) {
-//     var val;
-//     // get list of radio buttons with specified name
-//     var radios = form.elements[name];
+// var userGuesses = [];
+var right = [];
+var wrong = [];
 
-//     // loop through list of radio buttons
-//     for (var i = 0, len = radios.length; i < len; i++) {
-//         if (radios[i].checked) { // radio checked?
-//             val = radios[i].value; // if so, hold its value in val
-//             // console.log(val);
-//             break; // and break out of for loop
-//         }
-//     }
-//     return val; // return value of checked radio or undefined if none checked
-
-//     // get value of selected 'optradio' radio button in 'questionForm'
-//     var val = getRadioVal(document.getElementById("questionForm"), "optradio");
-//     console.log(val);
-// }
-
-// get value of selected 'optradio' radio button in 'questionForm'
-// var val = getRadioVal(document.getElementById("questionForm"), "optradio");
-// console.log(val);
-
-
-// $(document).ready(function () {
-// $("input[type='button']").click(function () {
-//     var radioValue = $("input[name="optradio"]:checked").val();
-//     if (radioValue) {
-//         alert(radioValue);
-//     }
+// $('input[name=optradio1]').click(function () {
 // });
 
+// $('input[name=optradio2]').click(function () {
 // });
 
-
-// Checking the value of the selected radio button for each question
-// $('input[name=optradio]').click(function () {
-//     console.log($('input[name=optradio]:checked').val());
+// $('input[name=optradio3]').click(function () {
 // });
 
-$('input[name=optradio1]').click(function () {
-    var userAnswer1 = $('input[name=optradio1]:checked').val();
-    console.log(userAnswer1);
-    if (userAnswer1 === "USA Today") {
-        console.log("Correct!");
-        correct++; // Do this logic after time's up so that it only adds one time?
-        console.log("Number correct: " + correct);
-    } else {
-        console.log("Wrong!");
-    }
-});
+// $('input[name=optradio4]').click(function () {
+// });
 
-$('input[name=optradio2]').click(function () {
-    var userAnswer2 = $('input[name=optradio2]:checked').val();
-    console.log(userAnswer2);
-    if (userAnswer2 === "1 million") {
-        console.log("Correct!");
-    } else {
-        console.log("Wrong!");
-    }
-});
+// $('input[name=optradio5]').click(function () {
+// });
 
-$('input[name=optradio3]').click(function () {
-    var userAnswer3 = $('input[name=optradio3]:checked').val();
-    console.log(userAnswer3);
-    if (userAnswer3 === "Blitzkrieg") {
-        console.log("Correct!");
-    } else {
-        console.log("Wrong!");
-    }
-});
+// $('input[name=optradio6]').click(function () {
+// });
 
-$('input[name=optradio4]').click(function () {
-    var userAnswer4 = $('input[name=optradio4]:checked').val();
-    console.log(userAnswer4);
-    if (userAnswer4 === "St. Nicholas") {
-        console.log("Correct!");
-    } else {
-        console.log("Wrong!");
-    }
-});
+// $('input[name=optradio7]').click(function () {
+// });
 
-$('input[name=optradio5]').click(function () {
-    var userAnswer5 = $('input[name=optradio5]:checked').val();
-    console.log(userAnswer5);
-    if (userAnswer5 === "American flag") {
-        console.log("Correct!");
-    } else {
-        console.log("Wrong!");
-    }
-});
+// $('input[name=optradio8]').click(function () {
+// });
 
-$('input[name=optradio6]').click(function () {
-    var userAnswer6 = $('input[name=optradio6]:checked').val();
-    console.log(userAnswer6);
-    if (userAnswer6 === "Squeaky Fromme") {
-        console.log("Correct!");
-    } else {
-        console.log("Wrong!");
-    }
-});
+// $('input[name=optradio9]').click(function () {
+// });
 
-$('input[name=optradio7]').click(function () {
-    var userAnswer7 = $('input[name=optradio7]:checked').val();
-    console.log(userAnswer7);
-    if (userAnswer7 === "Franklin D. Roosevelt") {
-        console.log("Correct!");
-    } else {
-        console.log("Wrong!");
-    }
-});
-
-$('input[name=optradio8]').click(function () {
-    var userAnswer8 = $('input[name=optradio8]:checked').val();
-    console.log(userAnswer8);
-    if (userAnswer8 === "Tim Berners-Lee") {
-        console.log("Correct!");
-    } else {
-        console.log("Wrong!");
-    }
-});
-
-$('input[name=optradio9]').click(function () {
-    var userAnswer9 = $('input[name=optradio9]:checked').val();
-    console.log(userAnswer9);
-    if (userAnswer9 === "3") {
-        console.log("Correct!");
-    } else {
-        console.log("Wrong!");
-    }
-});
-
-$('input[name=optradio10]').click(function () {
-    var userAnswer10 = $('input[name=optradio10]:checked').val();
-    console.log(userAnswer10);
-    if (userAnswer10 === "Tommy Lee Jones") {
-        console.log("Correct!");
-    } else {
-        console.log("Wrong!");
-    }
-});
+// $('input[name=optradio10]').click(function () {
+// });
 
 
 // Set timer
-var timeLeft = 61;
+// var timeLeft = 61;
+var timeLeft = 5;
 var intervalId;
 
 $("#start").on("click", timer);
@@ -202,20 +94,261 @@ function decrement() {
     // console.log(timeLeft);
     $("#show-number").html("<h3>" + timeLeft + "</h3>");
     if (timeLeft === 0) {
-        stop();
+        // stop();
+        clearInterval(intervalId);
         alert("Time's Up!");
+
+        var userAnswer1 = $('input[name=optradio1]:checked').val();
+        console.log(userAnswer1);
+        if (userAnswer1 === "USA Today") {
+            // console.log("Correct!");
+            right.push(userAnswer1);
+        } else {
+            // console.log("Wrong!");
+            wrong.push(userAnswer1);
+        }
+        var userAnswer2 = $('input[name=optradio2]:checked').val();
+        console.log(userAnswer2);
+        if (userAnswer2 === "1 million") {
+            right.push(userAnswer2);
+        } else {
+            wrong.push(userAnswer2);
+        }
+        var userAnswer3 = $('input[name=optradio3]:checked').val();
+        console.log(userAnswer3);
+        if (userAnswer3 === "Blitzkrieg") {
+            right.push(userAnswer3);
+        } else {
+            wrong.push(userAnswer3);
+        }
+        var userAnswer4 = $('input[name=optradio4]:checked').val();
+        console.log(userAnswer4);
+        if (userAnswer4 === "St. Nicholas") {
+            right.push(userAnswer4);
+        } else {
+            wrong.push(userAnswer4);
+        }
+        var userAnswer5 = $('input[name=optradio5]:checked').val();
+        console.log(userAnswer5);
+        if (userAnswer5 === "American flag") {
+            right.push(userAnswer5);
+        } else {
+            wrong.push(userAnswer5);
+        }
+        var userAnswer6 = $('input[name=optradio6]:checked').val();
+        console.log(userAnswer6);
+        if (userAnswer6 === "Squeaky Fromme") {
+            right.push(userAnswer6);
+        } else {
+            wrong.push(userAnswer6);
+        }
+        var userAnswer7 = $('input[name=optradio7]:checked').val();
+        console.log(userAnswer7);
+        if (userAnswer7 === "Franklin D. Roosevelt") {
+            right.push(userAnswer7);
+        } else {
+            wrong.push(userAnswer7);
+        }
+        var userAnswer8 = $('input[name=optradio8]:checked').val();
+        console.log(userAnswer8);
+        if (userAnswer8 === "Tim Berners-Lee") {
+            right.push(userAnswer8);
+        } else {
+            wrong.push(userAnswer8);
+        }
+        var userAnswer9 = $('input[name=optradio9]:checked').val();
+        console.log(userAnswer9);
+        if (userAnswer9 === "3") {
+            right.push(userAnswer9);
+        } else {
+            wrong.push(userAnswer9);
+        }
+        var userAnswer10 = $('input[name=optradio10]:checked').val();
+        console.log(userAnswer10);
+        if (userAnswer10 === "Tommy Lee Jones") {
+            right.push(userAnswer10);
+        } else {
+            wrong.push(userAnswer10);
+        }
+
+        console.log("Right Array: " + right + " || Wrong Array: " + wrong);
+
+        //====================================================================================
+
+        // Remove duplicates from right array here
+        function removeRightDuplicates(arrRight) {
+            let cleanedRightArray = [];
+            for (let i = 0; i < arrRight.length; i++) {
+                if (cleanedRightArray.indexOf(arrRight[i]) == -1) {
+                    cleanedRightArray.push(arrRight[i])
+                }
+            }
+            return cleanedRightArray;
+        }
+
+        console.log("Cleaned RIGHT Array: " + removeRightDuplicates(right));
+        console.log("Cleaned WRONG Array: " + removeWrongDuplicates(wrong));
+
+        var totalRight = right.length;
+        console.log("Total Right = " + totalRight);
+        var totalWrong = wrong.length;
+        console.log("Total Wrong = " + totalWrong);
+
+        // console.log("Unanswered = " +);
+
+
+        //====================================================================================
+
+        // Remove duplicates from wrong array here
+        function removeWrongDuplicates(arrWrong) {
+            let cleanedWrongArray = [];
+            for (let i = 0; i < arrWrong.length; i++) {
+                if (cleanedWrongArray.indexOf(arrWrong[i]) == -1) {
+                    cleanedWrongArray.push(arrWrong[i])
+                }
+            }
+            return cleanedWrongArray;
+        }
     }
 }
 
+
+
 function stop() {
     clearInterval(intervalId);
+
+    var userAnswer1 = $('input[name=optradio1]:checked').val();
+    console.log(userAnswer1);
+    if (userAnswer1 === "USA Today") {
+        // console.log("Correct!");
+        right.push(userAnswer1);
+    } else {
+        // console.log("Wrong!");
+        wrong.push(userAnswer1);
+    }
+    var userAnswer2 = $('input[name=optradio2]:checked').val();
+    console.log(userAnswer2);
+    if (userAnswer2 === "1 million") {
+        right.push(userAnswer2);
+    } else {
+        wrong.push(userAnswer2);
+    }
+    var userAnswer3 = $('input[name=optradio3]:checked').val();
+    console.log(userAnswer3);
+    if (userAnswer3 === "Blitzkrieg") {
+        right.push(userAnswer3);
+    } else {
+        wrong.push(userAnswer3);
+    }
+    var userAnswer4 = $('input[name=optradio4]:checked').val();
+    console.log(userAnswer4);
+    if (userAnswer4 === "St. Nicholas") {
+        right.push(userAnswer4);
+    } else {
+        wrong.push(userAnswer4);
+    }
+    var userAnswer5 = $('input[name=optradio5]:checked').val();
+    console.log(userAnswer5);
+    if (userAnswer5 === "American flag") {
+        right.push(userAnswer5);
+    } else {
+        wrong.push(userAnswer5);
+    }
+    var userAnswer6 = $('input[name=optradio6]:checked').val();
+    console.log(userAnswer6);
+    if (userAnswer6 === "Squeaky Fromme") {
+        right.push(userAnswer6);
+    } else {
+        wrong.push(userAnswer6);
+    }
+    var userAnswer7 = $('input[name=optradio7]:checked').val();
+    console.log(userAnswer7);
+    if (userAnswer7 === "Franklin D. Roosevelt") {
+        right.push(userAnswer7);
+    } else {
+        wrong.push(userAnswer7);
+    }
+    var userAnswer8 = $('input[name=optradio8]:checked').val();
+    console.log(userAnswer8);
+    if (userAnswer8 === "Tim Berners-Lee") {
+        right.push(userAnswer8);
+    } else {
+        wrong.push(userAnswer8);
+    }
+    var userAnswer9 = $('input[name=optradio9]:checked').val();
+    console.log(userAnswer9);
+    if (userAnswer9 === "3") {
+        right.push(userAnswer9);
+    } else {
+        wrong.push(userAnswer9);
+    }
+    var userAnswer10 = $('input[name=optradio10]:checked').val();
+    console.log(userAnswer10);
+    if (userAnswer10 === "Tommy Lee Jones") {
+        right.push(userAnswer10);
+    } else {
+        wrong.push(userAnswer10);
+    }
+    console.log("Right Array: " + right + " || Wrong Array: " + wrong);
+
+    //====================================================================================
+
+    // Remove duplicates from right array here
+    function removeRightDuplicates(arrRight) {
+        let cleanedRightArray = [];
+        for (let i = 0; i < arrRight.length; i++) {
+            if (cleanedRightArray.indexOf(arrRight[i]) == -1) {
+                cleanedRightArray.push(arrRight[i])
+            }
+        }
+        return cleanedRightArray;
+    }
+
+    console.log("Cleaned RIGHT Array: " + removeRightDuplicates(right));
+    console.log("Cleaned WRONG Array: " + removeWrongDuplicates(wrong));
+
+    var totalRight = right.length;
+    console.log("Total Right = " + totalRight);
+    var totalWrong = wrong.length;
+    console.log("Total Wrong = " + totalWrong);
+
+    // console.log("Unanswered = " +);
+
+
+    //====================================================================================
+
+    // Remove duplicates from wrong array here
+    function removeWrongDuplicates(arrWrong) {
+        let cleanedWrongArray = [];
+        for (let i = 0; i < arrWrong.length; i++) {
+            if (cleanedWrongArray.indexOf(arrWrong[i]) == -1) {
+                cleanedWrongArray.push(arrWrong[i])
+            }
+        }
+        return cleanedWrongArray;
+    }
+
+
+    //====================================================================================
 }
 
-// //  When the Done button gets clicked, run the stop function.
-// $("#done").on("click", stop);
 
-        // }
+// }
 
 
 
 // }
+
+
+// 1. Push user answers into a correct and incorrect array - push answers into array
+// as soon as timer reaches zero or the Done button is clicked --- DONE
+
+// movies.push(movie);
+
+// 2. Get rid of duplicates in the array that the answers have been pushed into (and
+// push into a new array without duplicates?) --- DONE
+
+// 3. Count how many correct/incorrect answers the user has (use .length? --> length of
+// array equals the total number correct/incorrect?)
+
+// 4. Display totals in browser
