@@ -9,14 +9,14 @@ body {
     font-size: 16px;
 }
 
-#start, #done {
+#start, #done, #again {
     background-color: #B48152;
     color: #FFEFE0;
     letter-spacing: .10em;
     border: none;
 }
 
-#start:hover, #done:hover {
+#start:hover, #done:hover, #again:hover {
     background: rgba(0,0,0,0);
 	color: #B48152;;
     box-shadow: inset 0 0 0 3px #B48152;
@@ -34,14 +34,15 @@ body {
 #game {
     background-color: #FFEFE0;
     padding: 40px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px; */
 }
 
 .jumbotron {
     background-color: #FFDFC2;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 .display-4 {
@@ -51,4 +52,21 @@ body {
 
 #game {
     display: none;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#score-board {
+    display: none;
+    text-align: left;
+}
+
+.card {
+    margin-top: 150px;
+    background-color: #FFDFC2;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#totals {
+    font-weight: 700;
+    letter-spacing: .05em;
 }

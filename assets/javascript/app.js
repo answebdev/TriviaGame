@@ -39,6 +39,12 @@ $("#start").on("click", function (gameContent) {
     gameContent.preventDefault();
 });
 
+// Hide the jumbotron when clicking Start button
+$("#start").on("click", function (gameContent) {
+    $(".jumbotron").hide();
+    gameContent.preventDefault();
+});
+
 
 // var userGuesses = [];
 var right = [];
@@ -92,10 +98,13 @@ function timer() {
 function decrement() {
     timeLeft--;
     // console.log(timeLeft);
+    // $("#score-board").show();
     $("#show-number").html("<h3>" + timeLeft + "</h3>");
     if (timeLeft === 0) {
         // stop();
         clearInterval(intervalId);
+        $("#score-board").show();
+        $("#game").hide();
         alert("Time's Up!");
 
         var userAnswer1 = $('input[name=optradio1]:checked').val();
@@ -193,8 +202,14 @@ function decrement() {
         console.log("Total Right = " + totalRight);
         var totalWrong = wrong.length;
         console.log("Total Wrong = " + totalWrong);
+        var totalUnanswered = 10 - (totalRight + totalWrong);
+        console.log("Total Unanswered = " + totalUnanswered);
 
         // console.log("Unanswered = " +);
+
+        document.getElementById("correct").innerHTML = "<h5>Correct Answers: " + totalRight + "</h5> ";
+        document.getElementById("incorrect").innerHTML = "<h5>Inorrect Answers: " + totalWrong + "</h5> ";
+        // document.getElementById("unanswered").innerHTML = "<h5>Unanswered: " + totalWrong + "</h5> ";
 
 
         //====================================================================================
@@ -212,10 +227,50 @@ function decrement() {
     }
 }
 
+// Show the totals when clicking Done button
+$("#done").on("click", function (gameContent) {
+    $("#score-board").show();
+    gameContent.preventDefault();
+});
 
+// Hide the questions when clicking Done button
+$("#done").on("click", function (gameContent) {
+    $("#game").hide();
+    gameContent.preventDefault();
+});
+
+// Hide the jumbotron when clicking Done button
+$("#done").on("click", function (gameContent) {
+    $(".jumbotron").hide();
+    gameContent.preventDefault();
+});
+
+// Play again: Show game page again
+// $("#again").on("click", function (gameContent) {
+//     $("#game").show();
+//     gameContent.preventDefault();
+// });
 
 function stop() {
     clearInterval(intervalId);
+
+    // $("#done").on("click", function (gameContent) {
+    //     $("#score-board").show();
+    //     gameContent.preventDefault();
+    // });
+
+    // Variables that hold references to the places in the HTML where we want to display things.
+    // var correctAnswers = document.getElementById("correct");
+    // document.getElementById("correct").innerHTML = totalRight;
+
+    // $(document).ready(function(){
+    // $("#hide").click(function(){
+    //     $("p").hide();
+    // });
+    // $("#done").click(function(){
+    //     $("#score-board").show();
+    // });
+    // });
 
     var userAnswer1 = $('input[name=optradio1]:checked').val();
     console.log(userAnswer1);
@@ -313,6 +368,10 @@ function stop() {
     console.log("Total Wrong = " + totalWrong);
 
     // console.log("Unanswered = " +);
+
+    document.getElementById("correct").innerHTML = "<h5>Correct Answers: " + totalRight + "</h5> ";
+    document.getElementById("incorrect").innerHTML = "<h5>Inorrect Answers: " + totalWrong + "</h5> ";
+    // document.getElementById("unanswered").innerHTML = "<h5>Unanswered: " + totalWrong + "</h5> ";
 
 
     //====================================================================================
