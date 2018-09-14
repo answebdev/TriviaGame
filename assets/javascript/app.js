@@ -24,11 +24,13 @@ $("#start").on("click", timer);
 //  When the Done button gets clicked, run the stop function (defined below).
 $("#done").on("click", stop);
 
+// Play again
 function timer() {
     timeLeft = 60;
     $("#show-number").empty();
     right = [];
     wrong = [];
+    resetForm();
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
 }
@@ -183,6 +185,15 @@ $("#again").on("click", function (gameContent) {
     $("#score-board").hide();
     gameContent.preventDefault();
 });
+
+// Clear the value of the radio buttons when clicking Play Again button
+function resetForm() {
+    $(document).ready(function () {
+        $(".form input[type=radio]").each(function () {
+            $(this).prop('checked', false);
+        });
+    });
+}
 
 function stop() {
     clearInterval(intervalId);
