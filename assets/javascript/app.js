@@ -91,7 +91,7 @@ var wrong = [];
 
 // Set timer
 // var timeLeft = 61;
-var timeLeft = 5;
+// var timeLeft = 5;
 var intervalId;
 
 $("#start").on("click", timer);
@@ -99,6 +99,10 @@ $("#start").on("click", timer);
 $("#done").on("click", stop);
 
 function timer() {
+    timeLeft = 5;
+    $("#show-number").empty();
+    right = [];
+    wrong = [];
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
 }
@@ -217,7 +221,7 @@ function decrement() {
         // console.log("Unanswered = " +);
 
         document.getElementById("correct").innerHTML = "<h5>Correct Answers: " + totalRight + "</h5> ";
-        document.getElementById("incorrect").innerHTML = "<h5>Inorrect Answers: " + totalWrong + "</h5> ";
+        document.getElementById("incorrect").innerHTML = "<h5>Incorrect Answers: " + totalWrong + "</h5> ";
         document.getElementById("unanswered").innerHTML = "<h5>Unanswered: " + totalWrong + "</h5> ";
 
 
@@ -399,7 +403,7 @@ function stop() {
     // console.log("Unanswered = " +);
 
     document.getElementById("correct").innerHTML = "<h5>Correct Answers: " + totalRight + "</h5> ";
-    document.getElementById("incorrect").innerHTML = "<h5>Inorrect Answers: " + totalWrong + "</h5> ";
+    document.getElementById("incorrect").innerHTML = "<h5>Incorrect Answers: " + totalWrong + "</h5> ";
     // document.getElementById("unanswered").innerHTML = "<h5>Unanswered: " + totalWrong + "</h5> ";
 
 
