@@ -99,7 +99,7 @@ $("#start").on("click", timer);
 $("#done").on("click", stop);
 
 function timer() {
-    timeLeft = 5;
+    timeLeft = 15;
     $("#show-number").empty();
     right = [];
     wrong = [];
@@ -125,71 +125,81 @@ function decrement() {
         if (userAnswer1 === "USA Today") {
             // console.log("Correct!");
             right.push(userAnswer1);
-        } else {
+        } else if (userAnswer1) {
             // console.log("Wrong!");
             wrong.push(userAnswer1);
+            // console.log("WRONG ARRAY: " + wrong);
         }
         var userAnswer2 = $('input[name=optradio2]:checked').val();
         console.log(userAnswer2);
         if (userAnswer2 === "1 million") {
             right.push(userAnswer2);
-        } else {
+        } else if (userAnswer2) {
+            // console.log("Wrong!");
             wrong.push(userAnswer2);
         }
         var userAnswer3 = $('input[name=optradio3]:checked').val();
         console.log(userAnswer3);
         if (userAnswer3 === "Blitzkrieg") {
             right.push(userAnswer3);
-        } else {
+        } else if (userAnswer3) {
+            // console.log("Wrong!");
             wrong.push(userAnswer3);
         }
         var userAnswer4 = $('input[name=optradio4]:checked').val();
         console.log(userAnswer4);
         if (userAnswer4 === "St. Nicholas") {
             right.push(userAnswer4);
-        } else {
+        } else if (userAnswer4) {
+            // console.log("Wrong!");
             wrong.push(userAnswer4);
         }
         var userAnswer5 = $('input[name=optradio5]:checked').val();
         console.log(userAnswer5);
         if (userAnswer5 === "American flag") {
             right.push(userAnswer5);
-        } else {
+        } else if (userAnswer5) {
+            // console.log("Wrong!");
             wrong.push(userAnswer5);
         }
         var userAnswer6 = $('input[name=optradio6]:checked').val();
         console.log(userAnswer6);
         if (userAnswer6 === "Squeaky Fromme") {
             right.push(userAnswer6);
-        } else {
+        } else if (userAnswer6) {
+            // console.log("Wrong!");
             wrong.push(userAnswer6);
         }
         var userAnswer7 = $('input[name=optradio7]:checked').val();
         console.log(userAnswer7);
         if (userAnswer7 === "Franklin D. Roosevelt") {
             right.push(userAnswer7);
-        } else {
+        } else if (userAnswer7) {
+            // console.log("Wrong!");
             wrong.push(userAnswer7);
         }
         var userAnswer8 = $('input[name=optradio8]:checked').val();
         console.log(userAnswer8);
         if (userAnswer8 === "Tim Berners-Lee") {
             right.push(userAnswer8);
-        } else {
+        } else if (userAnswer8) {
+            // console.log("Wrong!");
             wrong.push(userAnswer8);
         }
         var userAnswer9 = $('input[name=optradio9]:checked').val();
         console.log(userAnswer9);
         if (userAnswer9 === "3") {
             right.push(userAnswer9);
-        } else {
+        } else if (userAnswer9) {
+            // console.log("Wrong!");
             wrong.push(userAnswer9);
         }
         var userAnswer10 = $('input[name=optradio10]:checked').val();
         console.log(userAnswer10);
         if (userAnswer10 === "Tommy Lee Jones") {
             right.push(userAnswer10);
-        } else {
+        } else if (userAnswer10) {
+            // console.log("Wrong!");
             wrong.push(userAnswer10);
         }
 
@@ -222,7 +232,7 @@ function decrement() {
 
         document.getElementById("correct").innerHTML = "<h5>Correct Answers: " + totalRight + "</h5> ";
         document.getElementById("incorrect").innerHTML = "<h5>Incorrect Answers: " + totalWrong + "</h5> ";
-        document.getElementById("unanswered").innerHTML = "<h5>Unanswered: " + totalWrong + "</h5> ";
+        document.getElementById("unanswered").innerHTML = "<h5>Unanswered: " + totalUnanswered + "</h5> ";
 
 
         //====================================================================================
@@ -285,8 +295,6 @@ $("#again").on("click", function (gameContent) {
     gameContent.preventDefault();
 });
 
-
-
 function stop() {
     clearInterval(intervalId);
 
@@ -295,71 +303,81 @@ function stop() {
     if (userAnswer1 === "USA Today") {
         // console.log("Correct!");
         right.push(userAnswer1);
-    } else {
+    } else if (userAnswer1) {
         // console.log("Wrong!");
         wrong.push(userAnswer1);
+        // console.log("WRONG ARRAY: " + wrong);
     }
     var userAnswer2 = $('input[name=optradio2]:checked').val();
     console.log(userAnswer2);
     if (userAnswer2 === "1 million") {
         right.push(userAnswer2);
-    } else {
+    } else if (userAnswer2) {
+        // console.log("Wrong!");
         wrong.push(userAnswer2);
     }
     var userAnswer3 = $('input[name=optradio3]:checked').val();
     console.log(userAnswer3);
     if (userAnswer3 === "Blitzkrieg") {
         right.push(userAnswer3);
-    } else {
+    } else if (userAnswer3) {
+        // console.log("Wrong!");
         wrong.push(userAnswer3);
     }
     var userAnswer4 = $('input[name=optradio4]:checked').val();
     console.log(userAnswer4);
     if (userAnswer4 === "St. Nicholas") {
         right.push(userAnswer4);
-    } else {
+    } else if (userAnswer4) {
+        // console.log("Wrong!");
         wrong.push(userAnswer4);
     }
     var userAnswer5 = $('input[name=optradio5]:checked').val();
     console.log(userAnswer5);
     if (userAnswer5 === "American flag") {
         right.push(userAnswer5);
-    } else {
+    } else if (userAnswer5) {
+        // console.log("Wrong!");
         wrong.push(userAnswer5);
     }
     var userAnswer6 = $('input[name=optradio6]:checked').val();
     console.log(userAnswer6);
     if (userAnswer6 === "Squeaky Fromme") {
         right.push(userAnswer6);
-    } else {
+    } else if (userAnswer6) {
+        // console.log("Wrong!");
         wrong.push(userAnswer6);
     }
     var userAnswer7 = $('input[name=optradio7]:checked').val();
     console.log(userAnswer7);
     if (userAnswer7 === "Franklin D. Roosevelt") {
         right.push(userAnswer7);
-    } else {
+    } else if (userAnswer7) {
+        // console.log("Wrong!");
         wrong.push(userAnswer7);
     }
     var userAnswer8 = $('input[name=optradio8]:checked').val();
     console.log(userAnswer8);
     if (userAnswer8 === "Tim Berners-Lee") {
         right.push(userAnswer8);
-    } else {
+    } else if (userAnswer8) {
+        // console.log("Wrong!");
         wrong.push(userAnswer8);
     }
     var userAnswer9 = $('input[name=optradio9]:checked').val();
     console.log(userAnswer9);
     if (userAnswer9 === "3") {
         right.push(userAnswer9);
-    } else {
+    } else if (userAnswer9) {
+        // console.log("Wrong!");
         wrong.push(userAnswer9);
     }
     var userAnswer10 = $('input[name=optradio10]:checked').val();
     console.log(userAnswer10);
     if (userAnswer10 === "Tommy Lee Jones") {
         right.push(userAnswer10);
-    } else {
+    } else if (userAnswer10) {
+        // console.log("Wrong!");
         wrong.push(userAnswer10);
     }
     console.log("Right Array: " + right + " || Wrong Array: " + wrong);
@@ -397,14 +415,14 @@ function stop() {
     console.log("Total Right = " + totalRight);
     var totalWrong = wrong.length;
     console.log("Total Wrong = " + totalWrong);
-    // var totalUnanswered = 10 - (totalRight + totalWrong);
-    // console.log("Total Unanswered = " + totalUnanswered);
+    var totalUnanswered = 10 - (totalRight + totalWrong);
+    console.log("Total Unanswered = " + totalUnanswered);
 
     // console.log("Unanswered = " +);
 
     document.getElementById("correct").innerHTML = "<h5>Correct Answers: " + totalRight + "</h5> ";
     document.getElementById("incorrect").innerHTML = "<h5>Incorrect Answers: " + totalWrong + "</h5> ";
-    // document.getElementById("unanswered").innerHTML = "<h5>Unanswered: " + totalWrong + "</h5> ";
+    document.getElementById("unanswered").innerHTML = "<h5>Unanswered: " + totalUnanswered + "</h5> ";
 
 
     //====================================================================================
