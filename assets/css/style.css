@@ -13,14 +13,14 @@ body {
 	background-position: center;
 }
 
-#start, #done, #again, #exit, #goodbye, #close {
+#start, #done, #again, #quit, #goodbye, #close {
     background-color: #B48152;
     color: #FFEFE0;
     letter-spacing: .10em;
     border: none;
 }
 
-#start:hover, #done:hover, #again:hover, #exit:hover, #goodbye:hover, #close:hover {
+#start:hover, #done:hover, #again:hover, #quit:hover, #goodbye:hover, #close:hover {
     background: rgba(0,0,0,0);
 	color: #B48152;;
     box-shadow: inset 0 0 0 3px #B48152;
