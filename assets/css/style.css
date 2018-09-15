@@ -2,14 +2,27 @@
     box-sizing: border-box;
 }
 
+/* body { 
+    background: url(https://images.pexels.com/photos/327472/pexels-photo-327472.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } */
+
 body {
     text-align: center;
     background-color: #DAAF87;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    background: url(https://images.pexels.com/photos/327472/pexels-photo-327472.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    /* background: url(https://images.pexels.com/photos/327472/pexels-photo-327472.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); */
 	/* background-size: cover; */
-	background-position: center;
+    background-position: center;
+    background: url(https://images.pexels.com/photos/327472/pexels-photo-327472.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #start, #done, #again, #quit, #goodbye, #close {
