@@ -100,7 +100,7 @@ function decrement() {
             wrong.push(userAnswer9);
         }
         var userAnswer10 = $('input[name=optradio10]:checked').val();
-        if (userAnswer10 === "Tommy Lee Jones") {
+        if (userAnswer10 === "Michael") {
             right.push(userAnswer10);
         } else if (userAnswer10) {
             wrong.push(userAnswer10);
@@ -253,7 +253,7 @@ function stop() {
         wrong.push(userAnswer9);
     }
     var userAnswer10 = $('input[name=optradio10]:checked').val();
-    if (userAnswer10 === "Tommy Lee Jones") {
+    if (userAnswer10 === "Michael") {
         right.push(userAnswer10);
     } else if (userAnswer10) {
         wrong.push(userAnswer10);
