@@ -58,3 +58,28 @@ h1 {
         color: #fff;
     }
 }
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (min-width: 981px) and (max-width: 1200px) {
+    h1 {
+        font-size: 8rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 980px) {
+    h1 {
+        font-size: 8rem;
+    }
+}
+  
+@media screen and (min-width: 641px) and (max-width: 768px) { 
+    h1 {
+        font-size: 8rem;
+    }    
+}
+  
+@media screen and (max-width: 640px) {
+    h1 {
+        font-size: 14rem;
+    }
+}
