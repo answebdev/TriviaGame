@@ -14,7 +14,7 @@ html, body {
     background-color: black;
 }
 
-.container {
+body {
     width: 100%;
     height: 100%;
     position: relative;
@@ -60,6 +60,12 @@ h1 {
 }
 
 /* ===== MEDIA QUERIES ===== */
+@media (min-width: 1200px) {
+.container {
+    max-width: 100%;
+    }
+}
+
 @media screen and (min-width: 981px) and (max-width: 1200px) {
     h1 {
         font-size: 8rem;
