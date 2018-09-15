@@ -62,6 +62,10 @@ body {
     padding-bottom: 5px
 }
 
+h2 {
+    color: #FFEFE0;
+}
+
 #score-board {
     display: none;
     text-align: left;
