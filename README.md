@@ -16,7 +16,7 @@ This project uses jQuery and Javascript, as well as HTML and CSS, including Boot
 
 # Trivia Game Live Link
 
-Please check out the live link for GifTastic here:
+Please check out the live link for Trivia Game here:
 
 https://answebdev.github.io/TriviaGame/
 
@@ -26,4 +26,4 @@ https://answebdev.github.io/TriviaGame/
 
 ![Screenshot 02](screenshots/triviaGame-screenshot-02.png "Scoreboard")
 
-![Screenshot 03](screenshots/giftastic_demo.gif "Demo")
+![Screenshot 03](screenshots/triviaGameDemo.gif "Demo")
