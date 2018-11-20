@@ -24,6 +24,6 @@ https://answebdev.github.io/TriviaGame/
 
 ![Screenshot 01](screenshots/triviaGame-screenshot-01.png "Trivia Questions")
 
-![Screenshot 02](screenshots/triviaGame-screenshot-02.png "Scoreboard")
+![Screenshot 02](screenshots/triviaGame-screenshot-02.jpg "Scoreboard")
 
 ![Screenshot 03](screenshots/triviaGameDemo.gif "Demo")
